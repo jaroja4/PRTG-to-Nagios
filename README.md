@@ -7,8 +7,8 @@ Con esta integración es posible enviar notificaciones de PRTG a NAGIOS XI
 
           Completar el formulario y como canal de envío seleccionar ***Send SNMP Trap.***
           
-
-| :------------ | -----:|
+ | Campo  | Valor |
+| :------------ | :-----|
 | Host/IP Address | IP_NAGIOS |
 | SNMP Port      | 162 |
 | Community String | COMUNIDAD_SNMP |
