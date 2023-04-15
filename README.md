@@ -23,6 +23,7 @@ Con esta integración es posible enviar notificaciones de PRTG a NAGIOS XI
 ### En NAGIOS:
           Desde la web importar el MIB del PRTG:
             - PRTG-MIB.mib
+            -[Links]([http://localhost/](https://github.com/jaroja4/PRTG-to-Nagios/blob/main/PRTG-MIB.mib))
             - La opción: _Check this box if this server uses the SNMP Trap Interface._ debe de estar desmarcada.
             - Click en Procesar todos los Traps
             
