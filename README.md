@@ -1,7 +1,7 @@
 # PRTG-to-Nagios
 Con esta integración es posible enviar notificaciones de PRTG a NAGIOS XI
 
-En PRTG:
+### En PRTG:
           Ir a Setup/Account Settings/Notification Templates/Add Notification Template
 
 
@@ -19,7 +19,7 @@ En PRTG:
                       __SAVE__
 
 
-En NAGIOS:
+### En NAGIOS:
           Desde la web importar el MIB del PRTG:
             - PRTG-MIB.mib
             - La opción: _Check this box if this server uses the SNMP Trap Interface._ debe de estar desmarcada.
