@@ -56,11 +56,11 @@ Desde el servidor Nagios ir a /etc/snmp/
                 EDESC
 
 
-    - IMPORTANTE MANTENER EL MISMO "Custom Trap Code" 0310 en este ejemplo
+- IMPORTANTE MANTENER EL MISMO "Custom Trap Code" 0310 en este ejemplo
 
-    - Crear el archivo ___/usr/local/bin/prtg_snmptraphandling.py___
-    - Reiniciar el proceso de SNMPTT para que cargue la nueva configuración:
-       ___systemctl restart snmptt.service___
+- Crear el archivo ___/usr/local/bin/prtg_snmptraphandling.py___
+- Reiniciar el proceso de SNMPTT para que cargue la nueva configuración:
+___systemctl restart snmptt.service___
 
 
 Listo ya las alarmas se pueden visualizar en objetos desconocidos dentro de Nagios.
