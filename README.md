@@ -41,6 +41,7 @@ Desde el servidor Nagios ir a /etc/snmp/
                   3: paesslerPrtgTrapSensorstate
                   4: paesslerPrtgTrapMessage
                 EDESC
+                
    - Agregar justo despues:
    
                 EVENT paesslerPrtgTrap .1.3.6.1.4.1.32446.0.0310 "Status Events" Normal
@@ -53,6 +54,7 @@ Desde el servidor Nagios ir a /etc/snmp/
                   3: paesslerPrtgTrapSensorstate
                   4: paesslerPrtgTrapMessage
                 EDESC
+
 
     - IMPORTANTE MANTENER EL MISMO "Custom Trap Code" 0310 en este ejemplo
 
