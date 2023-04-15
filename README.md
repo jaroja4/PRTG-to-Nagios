@@ -42,6 +42,7 @@ Desde el servidor Nagios ir a /etc/snmp/
                   4: paesslerPrtgTrapMessage
                 EDESC
    - Agregar justo despues:
+   
                 EVENT paesslerPrtgTrap .1.3.6.1.4.1.32446.0.0310 "Status Events" Normal
                 FORMAT $*
                 EXEC /usr/local/bin/prtg_snmptraphandling.py "$r" "SNMP Traps" "$3" "$@" "" "$4"
