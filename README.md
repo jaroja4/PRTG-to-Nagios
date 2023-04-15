@@ -31,33 +31,33 @@ Desde el servidor Nagios ir a /etc/snmp/
       cp snmptt.conf bk_202304141200_snmptt.conf
   - Buscar la siguiente linea:
 
-      EVENT paesslerPrtgTrap .1.3.6.1.4.1.32446.0.10 "Status Events" Normal
-      FORMAT $*
-      EXEC /usr/local/bin/snmptraphandling.py "$aR" "SNMP Traps" "$s" "$@" "$-*" "$*"
-      SDESC
-      Variables:
-        1: paesslerPrtgTrapID
-        2: paesslerPrtgTrapEvent
-        3: paesslerPrtgTrapSensorstate
-        4: paesslerPrtgTrapMessage
-      EDESC
+                EVENT paesslerPrtgTrap .1.3.6.1.4.1.32446.0.10 "Status Events" Normal
+                FORMAT $*
+                EXEC /usr/local/bin/snmptraphandling.py "$aR" "SNMP Traps" "$s" "$@" "$-*" "$*"
+                SDESC
+                Variables:
+                  1: paesslerPrtgTrapID
+                  2: paesslerPrtgTrapEvent
+                  3: paesslerPrtgTrapSensorstate
+                  4: paesslerPrtgTrapMessage
+                EDESC
    - Agregar justo despues:
-      EVENT paesslerPrtgTrap .1.3.6.1.4.1.32446.0.0310 "Status Events" Normal
-      FORMAT $*
-      EXEC /usr/local/bin/prtg_snmptraphandling.py "$r" "SNMP Traps" "$3" "$@" "" "$4"
-      SDESC
-      Variables:
-        1: paesslerPrtgTrapID
-        2: paesslerPrtgTrapEvent
-        3: paesslerPrtgTrapSensorstate
-        4: paesslerPrtgTrapMessage
-      EDESC
+                EVENT paesslerPrtgTrap .1.3.6.1.4.1.32446.0.0310 "Status Events" Normal
+                FORMAT $*
+                EXEC /usr/local/bin/prtg_snmptraphandling.py "$r" "SNMP Traps" "$3" "$@" "" "$4"
+                SDESC
+                Variables:
+                  1: paesslerPrtgTrapID
+                  2: paesslerPrtgTrapEvent
+                  3: paesslerPrtgTrapSensorstate
+                  4: paesslerPrtgTrapMessage
+                EDESC
 
-    - IMPORTANTE MANTENER EL MISMO "Custom Trap Code"
+    - IMPORTANTE MANTENER EL MISMO "Custom Trap Code" 0310 en este ejemplo
 
-    - Crear el archivo /usr/local/bin/prtg_snmptraphandling.py
+    - Crear el archivo ___/usr/local/bin/prtg_snmptraphandling.py___
     - Reiniciar el proceso de SNMPTT para que cargue la nueva configuración:
-       systemctl restart snmptt.service
+       ___systemctl restart snmptt.service___
 
 
 Listo ya las alarmas se pueden visualizar en objetos desconocidos dentro de Nagios.
