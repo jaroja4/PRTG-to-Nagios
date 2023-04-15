@@ -8,8 +8,6 @@ Con esta integración es posible enviar notificaciones de PRTG a NAGIOS XI
           Completar el formulario y como canal de envío seleccionar ***Send SNMP Trap.***
           
 
-          
-Campo  | Valor |
 | :------------ | -----:|
 | Host/IP Address | IP_NAGIOS |
 | SNMP Port      | 162 |
@@ -19,19 +17,9 @@ Campo  | Valor |
 | Message | {"device":"%device","name":"%shortname","message":"%message"} |
 | Agent IP | IP_LOCALHOST |
                 
-
-
-          Host/IP Address:    IP_NAGIOS
-          SNMP Port:          162
-          Community String:   COMUNIDAD_SNMP
-          Custom Trap Code:   0310 (Este codigo es variable)
-          Message ID:         0
-          Message:            {"device":"%device","name":"%shortname","message":"%message"}
-          Agent IP:           IP_LOCALHOST
-
-                      __SAVE__
-
-
+          Guardar los cambios
+          
+          
 ### En NAGIOS:
           Desde la web importar el MIB del PRTG:
             - PRTG-MIB.mib
